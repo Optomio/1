@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-load my_id_b.mat %carico i dati
+%carica
 figure(1)
 plot(y_ARMA) %grafico serie storica
 figure(2)

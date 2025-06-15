@@ -16,7 +16,7 @@ options = optimoptions('fmincon','Display','iterdetailed','PlotFcn','optimplotfv
 [u,fval,exitflag,output] = fmincon(@(u)fun_obiettivo(u),u_0,A,b,A_eq,b_eq,LB,UB,@(u)my_nl(u),options);
 disp('the optimal solution is ')
 disp(u)
-disp(['la funzione di costo ottimale è $ ‘, num2str(fval)])
+disp(['la funzione di costo ottimale è €', num2str(fval)])
 %scrivo la funzione obiettivo 
 function L = fun_obiettivo(u)
 L = ; %devo stare attento se il problema è di max lo devo trasformare in min  max L = min -L

@@ -1,3 +1,7 @@
+clear
+clc
+close all
+
 % Dati dell'esercizio (aggiungo x2 come seconda variabile indipendente)
 x1 = [1; 2; 3; 4; 5; 6];       % Prima variabile (come prima)
 x2 = [0.1; 0.5; 1.2; 2.0; 2.5; 3.0]; % %%% NUOVA VARIABILE x2

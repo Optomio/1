@@ -18,15 +18,15 @@ UB=[10 15 25 10 8]';
 %definisco cond iniziale randomica
 xo=rand(n,1);
 options=optimoptions('fmincon','PlotFcn','optimplotfval');
-[x,fval,exitflag]= fmincon(@(x)funzione_13_Gennaio(x), xo,A,b,A_eq,b_eq,LB,UB,@(x)funzione_nl_13_Gennaio(x),options);
+[x,fval,exitflag]= fmincon(@(x)funzione_14_Giugno(x), xo,A,b,A_eq,b_eq,LB,UB,@(x)funzione_nl_14_Giugno(x),options);
 disp('la soluzione ottima è:')
 disp(x);
  
-function L=funzione_13_Gennaio(x)
+function L=funzione_14_Giugno(x)
 L=2*x(1)^2+x(2)^2-(x(3)*x(4))+4*x(5)^2+10;
 end
  
-function [c c_eq]=funzione_nl_13_Gennaio(x);
+function [c c_eq]=funzione_nl_14_Giugno(x);
 c_eq=[];
 c=[x(2)^2+x(3)-4*x(4)-30;
 4*x(1)+3*x(3)*x(5)-60];

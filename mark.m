@@ -1,3 +1,7 @@
+clear
+clc
+close all
+
 n = 3;
 rendimenti_attesi = [0.3, 0.5, 0.4];
 covarianza = [0.10, 0.02, -0.04; 0.02, 0.12, 0; -0.04, 0, 0.11];

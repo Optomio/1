@@ -1,3 +1,7 @@
+clear
+clc
+close all
+
 % Dati dell'esercizio
 x = [1; 2; 3; 4; 5; 6];      % Vettore colonna dei regressori
 y = [3.54; 7.83; 6.74; 12.86; 15.32; 16.69]; % Vettore colonna target

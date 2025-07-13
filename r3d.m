@@ -4,9 +4,9 @@ close all
 
 load data_3d.mat
 
-%Plotto i dati
+%Plotto i dati e vedi che hai nel daset che X ha una dimensione 200x 2 quindi hai due variabili x
 figure;
-scatter3(X(:,1),X(:,2),y,'filled');
+scatter3(X(:,1),X(:,2),y,'filled'); 
 hold on;
 
 %scrivo il numero di dati

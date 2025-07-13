@@ -10,7 +10,7 @@ y = [3.54; 7.83; 6.74; 12.86; 15.32; 16.69]; % Vettore colonna target
 figure;
 scatter(x, y, 'filled');
 hold on;
-title('Regressione Lineare - Esercizio 2');
+title('Regressione Lineare - Esercizio ');
 xlabel('x');
 ylabel('y');
 

@@ -8,7 +8,7 @@ A=[0.3 0 0; 0 0.25 0;0 0 0.33];
 %calcolo gli autovalori
 autovalori_A=eig(A);
 %definisco le matrici di ingresso e uscita B e C
-B=[1 2 3]';
+B=[1 2 3]'; % se è SISO B[1 0 0]' e C[1 1 1];
 C=[1 0 0; 1 1 1];
 %definisco il tempo di simulazione
 T=50;

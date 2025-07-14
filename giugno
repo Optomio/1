@@ -1,0 +1,43 @@
+clear
+clc
+close all
+
+% Carica i dati
+load('data_b.mat');  % contiene x, y, z
+
+% Separa le variabili
+n = length(z);
+N = floor(0.75 * n);
+
+% Split in training e test set
+z_train = z(1:N);
+y_train = y(1:N);
+z_test = z(N+1:end);
+y_test = y(N+1:end);
+
+% Costruisci la matrice dei regressori per entrambi i modelli (sono identici)
+PHI_train = [z_train.^2 z_train ones(N,1)];
+PHI_test = [z_test.^2 z_test ones(n-N,1)];
+
+% Stima dei parametri (θ) tramite minimi quadrati
+theta = PHI_train \ y_train;
+
+% Predizione su train e test
+y_hat_train = PHI_train * theta;
+y_hat_test = PHI_test * theta;
+
+% Statistiche sul training set
+RSS_train = sum((y_train - y_hat_train).^2);
+TSS_train = sum((y_train - mean(y_train)).^2);
+Rsq_train = 1 - RSS_train / TSS_train;
+
+% Statistiche sul test set
+RSS_test = sum((y_test - y_hat_test).^2);
+TSS_test = sum((y_test - mean(y_test)).^2);
+Rsq_test = 1 - RSS_test / TSS_test;
+
+% Stampa dei risultati
+fprintf('\n--- RISULTATI STIMA ---\n');
+fprintf('R^2 su TRAIN: %.4f\n', Rsq_train);
+fprintf('R^2 su TEST:  %.4f\n', Rsq_test);
+fprintf('Parametri stimati: θ = [%f %f %f]\n', theta);

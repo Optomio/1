@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-% Carica i dati
+% Carica i dati dal dataset
 load('data_b.mat');  % contiene x, y, z
 
 % Separa le variabili
